@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/CloyMonisVMax/VMDataSource.git', :tag => s.version.to_s }
   s.ios.deployment_target = '15.0'
   s.swift_version = '5'
-  s.source_files = 'Marvels/Classes/**/*'
-  s.resources = "Marvels/**/*.{png,json,xcassets,imageset,json,js}"
+  s.source_files = 'VMDataSource/Classes/**/*'
+  s.resources = "VMDataSource/**/*.{png,json,xcassets,imageset,json,js}"
 end
 
