@@ -1,0 +1,16 @@
+PODS:
+  - VMDataSource (0.1.0)
+
+DEPENDENCIES:
+  - VMDataSource (from `../`)
+
+EXTERNAL SOURCES:
+  VMDataSource:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  VMDataSource: f88aa8da70ff06bbc856349242bf48b2bb5549ef
+
+PODFILE CHECKSUM: 485946ea0fc33ad528894ec7dd7e6c5bfff29390
+
+COCOAPODS: 1.11.3

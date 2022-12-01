@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1420BF916A425C0F6344124D /* VMDataSource.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = VMDataSource.podspec; path = ../VMDataSource.podspec; sourceTree = "<group>"; };
+		1420BF916A425C0F6344124D /* VMDataSource.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VMDataSource.podspec; path = ../VMDataSource.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		17ECAC6DCF1471DB657EF2B8 /* Pods_VMDataSource_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VMDataSource_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9C4F52F92D757CF72C0115 /* Pods-VMDataSource_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMDataSource_Example.release.xcconfig"; path = "Target Support Files/Pods-VMDataSource_Example/Pods-VMDataSource_Example.release.xcconfig"; sourceTree = "<group>"; };
 		365093D774A47B47EF111BD4 /* Pods-VMDataSource_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMDataSource_Tests.debug.xcconfig"; path = "Target Support Files/Pods-VMDataSource_Tests/Pods-VMDataSource_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -43,10 +43,10 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		64DD55A15FA8F54E7F4DE7E5 /* Pods_VMDataSource_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VMDataSource_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6818DF0843A8BB4A47F26F60 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6818DF0843A8BB4A47F26F60 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9FD30949F52B226D5DDEA80D /* Pods-VMDataSource_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMDataSource_Tests.release.xcconfig"; path = "Target Support Files/Pods-VMDataSource_Tests/Pods-VMDataSource_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E0A89CF4BDF6F9C9A73BF9A7 /* Pods-VMDataSource_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMDataSource_Example.debug.xcconfig"; path = "Target Support Files/Pods-VMDataSource_Example/Pods-VMDataSource_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F361F3934D28DF9821BD4D38 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F361F3934D28DF9821BD4D38 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,6 @@
 				365093D774A47B47EF111BD4 /* Pods-VMDataSource_Tests.debug.xcconfig */,
 				9FD30949F52B226D5DDEA80D /* Pods-VMDataSource_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -479,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VMDataSource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -494,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VMDataSource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

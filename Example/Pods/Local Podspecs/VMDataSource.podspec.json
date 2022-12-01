@@ -1,0 +1,22 @@
+{
+  "name": "VMDataSource",
+  "version": "0.1.0",
+  "summary": "A short description of VMDataSource.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/CloyMonisVMax/VMDataSource",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "CloyMonisVMax": "cloy.m@vserv.com"
+  },
+  "source": {
+    "git": "https://github.com/CloyMonisVMax/VMDataSource.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "VMDataSource/Classes/**/*"
+}

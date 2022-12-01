@@ -1,0 +1,6 @@
+framework module VMDataSource {
+  umbrella header "VMDataSource-umbrella.h"
+
+  export *
+  module * { export * }
+}
