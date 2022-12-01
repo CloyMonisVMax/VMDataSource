@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '15.0'
   s.swift_version = '5'
   s.source_files = 'VMDataSource/Classes/**/*'
-  s.resources = "VMDataSource/**/*.{png,json,xcassets,imageset,json,js}"
+  s.resources = "VMDataSource/Assets/Marvel.xcdatamodeld"
+  
 end
 
