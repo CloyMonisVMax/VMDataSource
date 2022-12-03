@@ -22,12 +22,12 @@ enum MarvelDataSourceError: Error{
 
 public class MarvelDataSource {
     private let coreStack = MarvelDataStack(modelName: MarvelConstants.objectModelname.rawValue)
-    private let limit = 5
+    private let limit = 10
     private var client: MarvelClient?
     public init() { }
     public func fetch(superHero: MarvelSuperHero) -> MarvelSuperHeroDetails? {
         guard let id = superHero.id else {
-          return nil
+            return nil
         }
         let idd = Int32(id)
         var res = MarvelSuperHeroDetails()
@@ -51,7 +51,7 @@ public class MarvelDataSource {
                         hero.id = Int(eachHero.id)
                         hero.thumbnail = eachHero.imageUrl
                         hero.descripton = eachHero.desc
-                        //hero.index = eachHero.index
+                        hero.isBookmarked = eachHero.isBookmarked
                         hero.index = Int(eachHero.key)
                         heros.append(hero)
                     }
@@ -91,21 +91,21 @@ public class MarvelDataSource {
             }
         }
     }
-    func clearCache() {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: MarvelConstants.superHero.rawValue)
+    public func clearCache() {
+        let fetchHeroRequest = NSFetchRequest<NSFetchRequestResult>(entityName: MarvelConstants.superHero.rawValue)
         do {
-            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchHeroRequest)
             try coreStack.managedContext?.execute(deleteRequest)
         } catch let error {
             print("error: \(error)")
         }
     }
-    func update(superHero: SuperHero) {
-        guard let managedContext = coreStack.managedContext else {
-            return
+    public func update(marvel: MarvelSuperHero) -> MarvelSuperHero{
+        guard let managedContext = coreStack.managedContext, let id = marvel.id else {
+            return marvel
         }
         let fetchRequest: NSFetchRequest<SuperHero> = SuperHero.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "%K == %@",  argumentArray: [#keyPath(SuperHero.name), superHero.name])
+        fetchRequest.predicate = NSPredicate(format: "%K == %@",  argumentArray: [#keyPath(SuperHero.id), Int32(id)])
         fetchRequest.fetchLimit = 1
         var heros = [SuperHero]()
         do {
@@ -114,15 +114,23 @@ public class MarvelDataSource {
             print("error fetching hero from coreData: \(error)")
         }
         guard let hero = heros.first else {
-            return
+            return marvel
         }
-        hero.isBookmarked = superHero.isBookmarked
+        hero.isBookmarked = marvel.isBookmarked
         do {
             try managedContext.save()
-            print("values updated: \(superHero)")
+            //print("values updated: \(hero)")
         }catch let error {
             print("error saving to coreData: \(error)")
         }
+        var res = MarvelSuperHero()
+        res.name = hero.name
+        res.id = Int(hero.id)
+        res.thumbnail = hero.imageUrl
+        res.descripton = hero.desc
+        res.isBookmarked = hero.isBookmarked
+        res.index = marvel.index
+        return res
     }
     func comics(id: Int32) -> [String]? {
         guard let managedContext = coreStack.managedContext else {

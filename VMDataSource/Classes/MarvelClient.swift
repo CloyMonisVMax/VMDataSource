@@ -58,11 +58,9 @@ class MarvelClient {
                 return
             }
             let decoder = JSONDecoder()
-            
             do {
+                print("Client data received")
                 let response = try decoder.decode(ClientResponse.self, from: data)
-                // print("response:\(response)")
-                response.data?.results?.forEach{ print("\(String(describing: $0.name))") }
                 completionHandler(.success(response))
             } catch let error {
                 print("error:\(error)")

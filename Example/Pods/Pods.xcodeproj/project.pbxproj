@@ -28,9 +28,9 @@
 		B9A8ABCC2939262800AF65EC /* Resources+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A8ABB82939262800AF65EC /* Resources+CoreDataProperties.swift */; };
 		B9A8ABCD2939262800AF65EC /* Series+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A8ABB92939262800AF65EC /* Series+CoreDataProperties.swift */; };
 		B9A8ABCE2939262800AF65EC /* Comic+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A8ABBA2939262800AF65EC /* Comic+CoreDataProperties.swift */; };
-		B9A8ABCF2939262800AF65EC /* Marvel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9A8ABBB2939262800AF65EC /* Marvel.xcdatamodeld */; };
 		B9A8ABD02939262800AF65EC /* Stories+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A8ABBD2939262800AF65EC /* Stories+CoreDataProperties.swift */; };
 		B9A8ABD12939262800AF65EC /* Comic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A8ABBE2939262800AF65EC /* Comic+CoreDataClass.swift */; };
+		B9EC62E4293B22F20028847D /* Marvel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9EC62E2293B22F20028847D /* Marvel.xcdatamodeld */; };
 		BA809B7E27E7BC542F8E5EDE31057644 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		BD45E3851BA08D7E43F2726D616FBA36 /* Pods-VMDataSource_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 341A476238E3E33B572D843482D66CD1 /* Pods-VMDataSource_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D951953D5A076EBA0733B80CF9C88853 /* Pods-VMDataSource_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47228828B4ADC890BF5DAC5E11E8BF28 /* Pods-VMDataSource_Example-dummy.m */; };
@@ -95,9 +95,9 @@
 		B9A8ABB82939262800AF65EC /* Resources+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resources+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B9A8ABB92939262800AF65EC /* Series+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Series+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B9A8ABBA2939262800AF65EC /* Comic+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comic+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		B9A8ABBC2939262800AF65EC /* Marvel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Marvel.xcdatamodel; sourceTree = "<group>"; };
 		B9A8ABBD2939262800AF65EC /* Stories+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Stories+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B9A8ABBE2939262800AF65EC /* Comic+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comic+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B9EC62E3293B22F20028847D /* Marvel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Marvel.xcdatamodel; sourceTree = "<group>"; };
 		BAA3D23972C1AF1D48DB085C0517C3E3 /* Pods-VMDataSource_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VMDataSource_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C12524221671DF9B10376DB228AB6A76 /* Pods-VMDataSource_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VMDataSource_Tests-Info.plist"; sourceTree = "<group>"; };
 		C179C4076AD9E6D20A44458065E4BD75 /* Pods-VMDataSource_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VMDataSource_Tests"; path = Pods_VMDataSource_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				B9A8ABAE2939262800AF65EC /* ClientResponse.swift */,
+				B9EC62E2293B22F20028847D /* Marvel.xcdatamodeld */,
 				B9A8ABB02939262800AF65EC /* CoreData */,
 				B9A8ABAB2939262800AF65EC /* MarvelClient.swift */,
 				B9A8ABAA2939262800AF65EC /* MarvelDataSource.swift */,
@@ -250,7 +251,6 @@
 				B9A8ABB82939262800AF65EC /* Resources+CoreDataProperties.swift */,
 				B9A8ABB92939262800AF65EC /* Series+CoreDataProperties.swift */,
 				B9A8ABBA2939262800AF65EC /* Comic+CoreDataProperties.swift */,
-				B9A8ABBB2939262800AF65EC /* Marvel.xcdatamodeld */,
 				B9A8ABBD2939262800AF65EC /* Stories+CoreDataProperties.swift */,
 				B9A8ABBE2939262800AF65EC /* Comic+CoreDataClass.swift */,
 			);
@@ -450,7 +450,6 @@
 				B9A8ABC32939262800AF65EC /* ClientResponse.swift in Sources */,
 				B9A8ABC42939262800AF65EC /* MarvelSuperHero.swift in Sources */,
 				56369829D974D862CBF257BF543CE4A8 /* VMDataSource-dummy.m in Sources */,
-				B9A8ABCF2939262800AF65EC /* Marvel.xcdatamodeld in Sources */,
 				B9A8ABCB2939262800AF65EC /* Events+CoreDataProperties.swift in Sources */,
 				B9A8ABCA2939262800AF65EC /* Stories+CoreDataClass.swift in Sources */,
 				B9A8ABD02939262800AF65EC /* Stories+CoreDataProperties.swift in Sources */,
@@ -462,6 +461,7 @@
 				B9A8ABC82939262800AF65EC /* SuperHero+CoreDataProperties.swift in Sources */,
 				B9A8ABCE2939262800AF65EC /* Comic+CoreDataProperties.swift in Sources */,
 				B9A8ABC62939262800AF65EC /* Series+CoreDataClass.swift in Sources */,
+				B9EC62E4293B22F20028847D /* Marvel.xcdatamodeld in Sources */,
 				B9A8ABBF2939262800AF65EC /* MarvelDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -861,13 +861,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B9A8ABBB2939262800AF65EC /* Marvel.xcdatamodeld */ = {
+		B9EC62E2293B22F20028847D /* Marvel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B9A8ABBC2939262800AF65EC /* Marvel.xcdatamodel */,
+				B9EC62E3293B22F20028847D /* Marvel.xcdatamodel */,
 			);
-			currentVersion = B9A8ABBC2939262800AF65EC /* Marvel.xcdatamodel */;
-			path = Marvel.xcdatamodeld;
+			currentVersion = B9EC62E3293B22F20028847D /* Marvel.xcdatamodel */;
+			name = Marvel.xcdatamodeld;
+			path = VMDataSource/Assets/Marvel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

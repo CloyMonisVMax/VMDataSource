@@ -13,6 +13,8 @@ public struct MarvelSuperHero {
     public var name: String?
     public var descripton: String?
     public var thumbnail: String?
+    public var image: UIImage?
+    public var isBookmarked = false
 }
 
 public struct MarvelSuperHeroDetails {
@@ -37,6 +39,6 @@ public struct MarvelUrls {
 extension MarvelSuperHero: CustomStringConvertible {
     public var description: String {
         //return "index: \(index) id:\(id) name:\(name) descripton:\(descripton) thumbnail:\(thumbnail) comics:\(comics) stories:\(stories) events:\(events) urls:\(urls)"
-        return "index: \(index) id:\(id) name:\(name) descripton:\(descripton) thumbnail:\(thumbnail)"
+        return "index: \(index) id:\(id) name:\(name) descripton:\(descripton) thumbnail:\(thumbnail) isBookmarked\(isBookmarked)"
     }
 }
