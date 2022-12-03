@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		70024495A263E3184062A793 /* Pods_VMDataSource_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17ECAC6DCF1471DB657EF2B8 /* Pods_VMDataSource_Example.framework */; };
 		9043F98EE393D73B258E8CBC /* Pods_VMDataSource_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DD55A15FA8F54E7F4DE7E5 /* Pods_VMDataSource_Tests.framework */; };
+		B9EC62E7293B24530028847D /* VMDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EC62E6293B24530028847D /* VMDataSourceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		64DD55A15FA8F54E7F4DE7E5 /* Pods_VMDataSource_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VMDataSource_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6818DF0843A8BB4A47F26F60 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9FD30949F52B226D5DDEA80D /* Pods-VMDataSource_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMDataSource_Tests.release.xcconfig"; path = "Target Support Files/Pods-VMDataSource_Tests/Pods-VMDataSource_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B9EC62E6293B24530028847D /* VMDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMDataSourceTests.swift; sourceTree = "<group>"; };
 		E0A89CF4BDF6F9C9A73BF9A7 /* Pods-VMDataSource_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMDataSource_Example.debug.xcconfig"; path = "Target Support Files/Pods-VMDataSource_Example/Pods-VMDataSource_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F361F3934D28DF9821BD4D38 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B9EC62E5293B24240028847D /* VMDataSourceTC */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -157,6 +160,14 @@
 				64DD55A15FA8F54E7F4DE7E5 /* Pods_VMDataSource_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9EC62E5293B24240028847D /* VMDataSourceTC */ = {
+			isa = PBXGroup;
+			children = (
+				B9EC62E6293B24530028847D /* VMDataSourceTests.swift */,
+			);
+			name = VMDataSourceTC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				B9EC62E7293B24530028847D /* VMDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -465,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

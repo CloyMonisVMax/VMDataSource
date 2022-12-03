@@ -100,7 +100,7 @@
 		B9EC62E3293B22F20028847D /* Marvel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Marvel.xcdatamodel; sourceTree = "<group>"; };
 		BAA3D23972C1AF1D48DB085C0517C3E3 /* Pods-VMDataSource_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VMDataSource_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C12524221671DF9B10376DB228AB6A76 /* Pods-VMDataSource_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VMDataSource_Tests-Info.plist"; sourceTree = "<group>"; };
-		C179C4076AD9E6D20A44458065E4BD75 /* Pods-VMDataSource_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VMDataSource_Tests"; path = Pods_VMDataSource_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C179C4076AD9E6D20A44458065E4BD75 /* Pods_VMDataSource_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VMDataSource_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD23FCA3329A612F41202BF2F7814696 /* Pods-VMDataSource_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VMDataSource_Tests-dummy.m"; sourceTree = "<group>"; };
 		CDB6C94CB2EF00426D7FCA07C86B875E /* VMDataSource-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VMDataSource-prefix.pch"; sourceTree = "<group>"; };
 		E079586A6302764758819D5D7CE2B433 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				72F6A695E94A421633A67D90E8D8C052 /* Pods-VMDataSource_Example */,
-				C179C4076AD9E6D20A44458065E4BD75 /* Pods-VMDataSource_Tests */,
+				C179C4076AD9E6D20A44458065E4BD75 /* Pods_VMDataSource_Tests.framework */,
 				6F425BACC327AD84D63725890E09A176 /* VMDataSource.framework */,
 			);
 			name = Products;
@@ -332,7 +332,7 @@
 			);
 			name = "Pods-VMDataSource_Tests";
 			productName = Pods_VMDataSource_Tests;
-			productReference = C179C4076AD9E6D20A44458065E4BD75 /* Pods-VMDataSource_Tests */;
+			productReference = C179C4076AD9E6D20A44458065E4BD75 /* Pods_VMDataSource_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		37C096D92295727A79880AFF0FDAC1E5 /* Pods-VMDataSource_Example */ = {
@@ -508,7 +508,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-VMDataSource_Tests/Pods-VMDataSource_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-VMDataSource_Tests/Pods-VMDataSource_Tests.modulemap";
@@ -670,7 +670,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-VMDataSource_Tests/Pods-VMDataSource_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-VMDataSource_Tests/Pods-VMDataSource_Tests.modulemap";

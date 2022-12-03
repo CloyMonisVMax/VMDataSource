@@ -16,15 +16,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        dataSource.clearCache()
         dataSource.fetch(from: 0) { result in
             switch result {
             case .success(let model):
-                print(model)
-                let comics = self.dataSource.fetch(superHero: model[0])
-                let comics2 = self.dataSource.fetch(superHero: model[1])
-                let comics3 = self.dataSource.fetch(superHero: model[2])
-                let comics4 = self.dataSource.fetch(superHero: model[3])
-                print("hello")
+                print(model[2])
+                let superHeroDetails = self.dataSource.fetch(superHero: model[2])
+                print(superHeroDetails)
+                
+                let superHeroDetails1 = self.dataSource.fetch(superHero: model[8])
+                print(superHeroDetails1)
+                
             case .failure(let error):
                 print(error)
             }

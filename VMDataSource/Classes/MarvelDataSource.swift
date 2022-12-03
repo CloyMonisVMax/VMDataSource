@@ -10,9 +10,17 @@ import CoreData
 
 let coreDispatchQueue = DispatchQueue(label: "com.marvel.coredata", attributes: .concurrent)
 
-enum MarvelConstants: String {
+enum MarvelConstants: String, CaseIterable {
     case objectModelname = "Marvel"
+}
+
+enum MarvelEntity: String, CaseIterable {
     case superHero = "SuperHero"
+    case comic = "Comic"
+    case events = "Events"
+    case resources = "Resources"
+    case series = "Series"
+    case stories = "Stories"
 }
 
 enum MarvelDataSourceError: Error{
@@ -92,12 +100,14 @@ public class MarvelDataSource {
         }
     }
     public func clearCache() {
-        let fetchHeroRequest = NSFetchRequest<NSFetchRequestResult>(entityName: MarvelConstants.superHero.rawValue)
-        do {
-            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchHeroRequest)
-            try coreStack.managedContext?.execute(deleteRequest)
-        } catch let error {
-            print("error: \(error)")
+        for eachEntity in MarvelEntity.allCases {
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: eachEntity.rawValue)
+            do {
+                let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+                try coreStack.managedContext?.execute(deleteRequest)
+            } catch let error {
+                print("error: \(error)")
+            }
         }
     }
     public func update(marvel: MarvelSuperHero) -> MarvelSuperHero{
@@ -273,6 +283,7 @@ extension MarvelDataSource {
                         comic.heroID = Int32(id)
                     }
                 }
+                print("comics.count\(comics.count) for \(id)")
             }
             if let allSeries = hero.series?.items, allSeries.count > 0 {
                 for series in allSeries {

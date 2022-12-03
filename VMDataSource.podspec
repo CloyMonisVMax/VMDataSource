@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'VMDataSource'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'A short summary of VMDataSource.'
   s.description      = 'A short description of VMDataSource.'
   s.homepage         = 'https://github.com/CloyMonisVMax/VMDataSource'
